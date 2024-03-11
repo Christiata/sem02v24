@@ -1,0 +1,28 @@
+# Ignore everything
+*
+# But not these files...
+!/.gitignore
+GraalVM
+Figur 13: Truffle "på toppen" av GraalVM.
+Truffle
+(runtime compilation
+using
+Futamura Projections)
+!*.go
+!go.sum
+!go.mod
+!*.svg
+!*.jpg
+!README.md
+!LICENSE
+!Dockerfile-base
+!*.c
+!*.java
+!*.h
+!*.rs
+!*.sh
+!*.py
+!*.cs
+# !Makefile
+# ...even if they are in subdirectories
+!*/
