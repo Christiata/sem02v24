@@ -8,7 +8,14 @@ sudo \
 nano \
 wget \
 curl \
-git
+git \
+build-essential \ 
+gcc \ 
+openjdk-21-jdk \ 
+mono-complete \
+python3 \
+strace \
+valgrid
 RUN useradd -G sudo -m -d /home/Chris -s /bin/bash -p "$(openssl passwd -1 exit)" Chris
 USER Chris
 WORKDIR /home/Chris
@@ -29,3 +36,6 @@ SHELL ["/bin/bash", "-c"]
 RUN mkdir -p $HOME/go/{src,bin}
 ENV GOPATH="/home/Chris/go"
 ENV PATH="${PATH}:${GOPATH}/bin:/usr/local/go/bin"
+RUN curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf \
+| sh -s -- -y
+ENV PATH="${PATH}:${HOME}/.cargo/bin"
