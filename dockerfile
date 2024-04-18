@@ -22,7 +22,7 @@ RUN git config --global user.email "Christiata@uia.no" \
 && git config --global url."https://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:@github.com/".insteadOf "https://github.com" \
 && mkdir -p github.com/Christiata/sem02v24
 USER root
-RUN curl -SL https://go.dev/dl/go1.21.7.windows-amd64.msi \
+RUN curl -SL https://go.dev/dl/go1.22.2.windows-amd64.msi \
 | tar xvz -C /usr/local
 USER Chris
 SHELL ["/bin/bash", "-c"]
